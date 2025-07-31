@@ -1,0 +1,553 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Prevent Horizontal Scroll */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    background: #f8f8f8;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.logo {
+    text-align: center;
+    margin-top: 11px;
+    font-size: 27px;
+    margin-left: 21px;
+}
+.searchBar{
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+} 
+.searchBar input{
+    width: 300px;
+    height: 12px;
+    padding: 11px;
+    outline: none;
+    border-radius: 33px;
+    border: 1px solid rgb(53, 53, 53);
+    font-size: 18px;
+}
+.searchBar button{
+    width: 60px;
+    height: 36px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    margin-left: -33px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    background-color: orangered;
+}
+
+
+
+.showMeal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.showMeal .card{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    text-align: center;
+    margin-inline: 20px;
+    margin-top: 22px;
+    box-shadow: 1px 3px 3px 3px rgb(213, 212, 212);
+    border-radius: 4px;
+}
+.card img{
+    width: 100%;
+    border-radius: 4px;
+
+
+}
+.card p{
+    margin-top: 11px;
+}
+.card button{
+    width: 90px;
+    height: 30px;
+    background-color: orangered;
+    color: white;
+    margin-top: 11px;
+    border: none;
+    font-size: 15px;
+}
+ 
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 18%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 60%;  /* Increased width */
+    max-width: 900px; /* Maximum width */
+    max-height: 80vh; /* Prevents it from taking the full screen */
+    overflow-y: auto; /* Enables scrolling */
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+ 
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Meal Details */
+#mealDetails img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#mealDetails h2 {
+    color: #ff6600;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+#mealDetails p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
+    padding: 5px 15px;
+}
+
+/* Add scrollbar styles */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #ff6600;
+    border-radius: 5px;
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%; /* Adjust width for small screens */
+        max-height: 75vh; /* Keep it visible on small screens */
+    }
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ff5722;
+    color: white;
+    position: relative;
+}
+
+.navlogo {
+    width: 70px;
+   
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.searchBar {
+    display: flex;
+    gap: 10px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ff5722;
+        width: 100%;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .searchBar {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.about {
+    padding: 80px 10%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.about .heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about .heading span {
+    color: #ff6347;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about .image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.about .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about .content {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+.about .content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about .content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff6347;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.about .btn:hover {
+    background: #e5533d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .content {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* Hero Section */
+.home {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: url('./images/homeimg.jpg') no-repeat center center;
+    background-size: cover;
+   
+}
+
+/* Ensuring Background is Responsive */
+@media (max-width: 1024px) {
+    .home {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        min-height: 60vh;
+        padding: 30px;
+        background-size: contain; /* Image will adjust */
+        background-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        min-height: 50vh;
+        padding: 20px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+/* Content Box (Left Aligned) */
+.content {
+    max-width: 600px;
+    color: white;
+}
+
+/* Headings */
+.content h3 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.content h3 span {
+    color: #ffcc00;
+}
+
+/* Paragraph */
+.content p {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .home {
+        padding: 30px;
+    }
+    .content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .content {
+        max-width: 90%;
+    }
+    .content h3 {
+        font-size: 1.5rem;
+    }
+    .content p {
+        font-size: 0.9rem;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .content h3 {
+        font-size: 1.2rem;
+    }
+    .content p {
+        font-size: 0.8rem;
+    }
+   
+}
+
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex
+;
+    justify-content: center;
+    padding-top: 10px;
+}
+.heading span {
+    color: #ff6347;
+    padding-right: 10px;
+}
+
+/* Footer Styling */
+.footer {
+    background: #222;
+    color: #fff;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ff6347;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+.footer-social a {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 5px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ff6347;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+

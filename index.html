@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Meal Finder</div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#explore" id="exploreMeals">Explore Meals</a></li>
+    </ul>
+
+    <div class="searchBar">
+        <input type="text" placeholder="Search Here" id="searchInput">
+        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+</nav>
+
+
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Fresh <span>Food in the</span> Morning</h3>
+<p>Kickstart your day with fresh, wholesome food that fuels your energy and boosts your mood. Savor every bite for a healthier, happier you!</p>           
+        </div>
+    </section>
+
+    
+    <!-- Home Section (Meal Display) -->
+    <h1 class="heading"><span>Our</span> Foods</h1>
+    <section class="showMeal"  id="explore"></section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <h1 class="heading"><span>About</span> Us</h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images/aboutusimg.jpeg" alt="About Us Image">
+            </div>
+
+            <div class="content">
+                <h3>What Makes Our Food Special?</h3>
+                <p>
+                    Made with fresh ingredients and crafted with care, our food is a perfect 
+                    blend of taste and nutrition, ensuring every bite is a delight.
+                </p>
+                <p>
+                    From farm to table, we prioritize quality, flavor, and authenticity, bringing 
+                    you a meal that’s both wholesome and satisfying.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            
+        </div>
+    </section>
+
+    </div>
+
+    <!-- Modal for Meal Details -->
+    <div id="mealModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="mealDetails"></div>
+        </div>
+    </div>
+
+  <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Logo & About -->
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Meal Finder Logo">
+                <p>Discover delicious meals with ease.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: beheraankita@gmail.com</p>
+                <p>Phone: 9337425285</p>
+                <p>Address: 123, Food Street, City</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Meal Finder. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
